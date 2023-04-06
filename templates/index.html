@@ -1,0 +1,18 @@
+{% block main %}
+
+<h2>Enter the details to check the FMI</h2>
+<form action={{url_for('predict')}} method="post">
+  <input type="text" name="Temprature" id="Temprature" placeholder="Temprature" required/><br>
+  <input type="text" name="RH" id="RH" placeholder="RH" required /><br>
+  <input type="text" name="Ws" id="Ws" placeholder="Ws" required /><br>
+  <input type="text" name="Rain" id="Rain" placeholder="Rain" required /><br>
+  <input type="text" name="FFMC" id="FFMC" placeholder="FFMC" required /><br>
+  <input type="text" name="DMC" id="DMC" placeholder="DMC" required /><br>
+  <input type="text" name="ISI" id="ISI" placeholder="ISI" required /><br>
+  <input type="text" name="Classes" id="Classes" placeholder="Classes" required/><br>
+  <input type="text" name="Region" id="Region" placeholder="Region" required/><br>
+  <button type="submit">Submit</button>
+</form>
+  <h1>{{FMI}}</h1>
+
+{% endblock%}
